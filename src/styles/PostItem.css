@@ -1,0 +1,10 @@
+.post {
+    display: flex;
+    width: 100%;
+    padding: 15px;
+    border: 2px solid limegreen;
+    border-radius: 5px;
+    margin-top: 15px;
+    justify-content: space-between;
+    align-items: center;
+}

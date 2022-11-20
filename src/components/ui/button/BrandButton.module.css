@@ -1,0 +1,14 @@
+.btn {
+    padding: 5px 15px;
+    color: black;
+    font-size: 14px;
+    background: limegreen;
+    border: 1px solid springgreen;
+    border-radius: 5px;
+    cursor: pointer;
+}
+:hover.btn{
+    background: springgreen;
+    border: 1px solid limegreen;
+    color: white;
+}
