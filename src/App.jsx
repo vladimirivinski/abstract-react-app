@@ -26,11 +26,11 @@ function App() {
         setReversedSort('ASC');
         setPosts([...posts].sort((a,b) => a[sort].localeCompare(b[sort])));
     }
-    const reversePosts = (order) => {
+    const sortDirection = (order) => {
         setReversedSort(order);
-        if(order ==='DESC'){
+        if(order ==='desc' && selectedSort){
             setPosts([...posts].sort((a,b) => a[selectedSort].localeCompare(b[selectedSort])).reverse());          
-        } else if(order ==='ASC'){
+        } else if(order ==='asc' && selectedSort){
             setPosts([...posts].sort((a,b) => a[selectedSort].localeCompare(b[selectedSort])));
         }
     }
@@ -43,19 +43,19 @@ function App() {
                 <BrandSelect 
                     value={selectedSort}
                     onChange={sortPosts}
-                    defaultValue="Select option" 
+                    defaultValue="Sort options" 
                     options={[
-                        {value: 'title', name : 'Name'},
-                        {value: 'body', name : 'Description'},
+                        {value: 'title', name: 'Name'},
+                        {value: 'body', name: 'Description'},
                     ]}
                 />
                 <BrandSelect 
                     value={reversedSort}
-                    onChange={reversePosts}
-                    defaultValue="Select option" 
+                    onChange={sortDirection}
+                    defaultValue="Sort direction" 
                     options={[
-                        {value: 'ASC', name : 'A-Z'},
-                        {value: 'DESC', name : 'Z-A'},
+                        {value: 'asc', name: 'A-Z'},
+                        {value: 'desc', name: 'Z-A'},
                     ]}
                 />
             </div>

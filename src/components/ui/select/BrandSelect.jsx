@@ -1,10 +1,12 @@
 import React from 'react';
+import cl from './BrandSelect.module.css';
 
-const BrandSelect = ({options, defaultValue, value, direction, onChange}) => {
+
+const BrandSelect = ({options, defaultValue, value, onChange}) => {
     return (
         <select
+            className={cl.brand}
             value={value}
-            direction={direction}
             onChange={ event => onChange(event.target.value) }
         >
             <option value="" disabled selected hidden>{defaultValue}</option>

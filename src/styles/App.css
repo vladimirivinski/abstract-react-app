@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: rgb(218, 218, 218);
 }
 
 #root{
@@ -12,4 +13,3 @@
 .App{
     width: 1200px;
 }
-
